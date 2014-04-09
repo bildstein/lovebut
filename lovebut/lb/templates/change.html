@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Change your screenname</h2>
+<p>Your current screenname is <strong>{{current}}</strong>.</p>
+<form method="post" name="change">
+<p>
+  {{form.hidden_tag()}}
+  {{form.change.label}} {{form.change}} <input type="submit" value="Go!" /><br>
+</p>
+</form>
+{% endblock %}
