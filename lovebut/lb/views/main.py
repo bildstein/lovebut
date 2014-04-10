@@ -80,7 +80,7 @@ def home_page():
     """
     if not is_authenticated():
         return render_template('landing.html')
-    screenname = g.user['name']
+    screenname = g.user['name'].split()[0]
     api = API()
     req = LoginRequest(identity=g.user['identity'],  # @UndefinedVariable
                        email=g.user['email'],  # @UndefinedVariable
